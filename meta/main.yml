@@ -1,0 +1,16 @@
+---
+
+dependencies: []
+
+galaxy_info:
+  author: DevopsWorks
+  company: DevopsWorks 
+  description: ansible-certbot-dns01 role
+  license: MIT
+  min_ansible_version: "2.4"
+  platforms:
+  - name: Debian
+    versions:
+    - all
+  galaxy_tags:
+  - system
