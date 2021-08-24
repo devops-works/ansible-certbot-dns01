@@ -1,3 +1,4 @@
 ---
 certbot_dns_provider: ovh
 certbot_dns_provider_ovh_endpoint: ovh-eu
+certbot_staging: false

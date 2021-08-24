@@ -13,6 +13,7 @@ Only OVH provider supported right now.
 - `certbot_dns_provider_ovh_consumer_key` 
 - `certbot_wildcard_domain`
 - `certbot_mail`
+- `certbot_staging` (boolean, default `false`)
 
 ## API Keys
 
