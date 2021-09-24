@@ -26,6 +26,6 @@
 
 - name: Generate Let's Encrypt cert if not exists (production mode)
   shell: "certbot certonly --dns-{{ certbot_dns_provider }} --dns-ovh-credentials /root/.secrets/certbot/{{ certbot_dns_provider }}.ini -d *.{{ certbot_wildcard_domain }} -m {{ certbot_mail }} --agree-tos -n"
-  when: not cert_result.stat.exists
+  when: not cert_result.stat.exists and not certbot_staging
   ignore_errors: yes
 
