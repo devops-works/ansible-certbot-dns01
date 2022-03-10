@@ -14,6 +14,18 @@
     dest: "/root/.secrets/certbot/{{ certbot_dns_provider }}.ini"
     mode: 0600
 
+- name: Create hook directories
+  file:
+    path: /etc/letsencrypt/{{ item }}
+    mode: 0750
+    owner: root
+    group: root
+    state: directory
+  loop:
+    - renewal-hooks
+    - renewal-hooks/pre
+    - renewal-hooks/post
+
 - name: Check that the cert exists
   stat:
     path: "/etc/letsencrypt/live/{{ certbot_wildcard_domain }}/fullchain.pem"
